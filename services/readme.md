@@ -1,1 +1,1 @@
-Microservicios(Pipeline COmponents. Verifier)
+Microservicios Core (Razonamiento, Flujo, Agentes)

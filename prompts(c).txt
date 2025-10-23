@@ -1,0 +1,83 @@
+El **cerebro izquierdo** (o hemisferio cerebral izquierdo) se considera generalmente el encargado de las funciones **analíticas, lógicas y secuenciales**.
+
+A continuación, se presentan sus fundamentos y elementos clave:
+
+---
+
+## Fundamentos del Cerebro Izquierdo
+
+El hemisferio izquierdo procesa la información de forma **lineal** y **detallada**. Su fundamento principal es la **lógica**, buscando el orden, la causa y el efecto, y la estructura.
+
+* **Lógica y Racionalidad:** Se basa en el razonamiento deductivo e inductivo.
+* **Secuencialidad:** Procesa la información paso a paso, en orden.
+* **Detalle:** Se enfoca en las partes de un todo, en lugar de la imagen completa.
+* **Temporalidad:** Es fundamental para la percepción del tiempo y la planificación.
+
+---
+
+## Elementos Clave Asociados al Cerebro Izquierdo
+
+| Elemento Clave | Descripción |
+| :--- | :--- |
+| **Lenguaje (Producción y Comprensión)** | Es su función más conocida. Incluye la **gramática**, la **sintaxis**, la **lectura** y la **escritura**. Las áreas de **Broca** (producción del habla) y **Wernicke** (comprensión del lenguaje) se encuentran predominantemente en este hemisferio. |
+| **Habilidades Matemáticas** | Capacidad para el **cálculo**, la **aritmética** y la **resolución de problemas** con base en números y fórmulas. |
+| **Análisis Lógico** | La capacidad para **analizar** datos, **categorizar** información y **resolver problemas** de manera estructurada. |
+| **Control Motor del Lado Derecho** | Controla los movimientos del **lado derecho** del cuerpo, ya que los caminos nerviosos se cruzan (esto se conoce como *decusación*). |
+| **Procesamiento de la Información Auditiva** | Procesamiento de los **sonidos del habla** y los **detalles** de una melodía (aunque la percepción holística de la música se relaciona más con el derecho). |
+
+**En resumen:** El hemisferio izquierdo es el **motor del análisis y la comunicación verbal** 🧠🗣️. 
+
+La creación de un **Agente de IA** (Inteligencia Artificial) utilizando **MCP** (Model Context Protocol) en la nube se centra en exponer tus herramientas y APIs a un modelo de lenguaje grande (LLM), permitiéndole ejecutar acciones complejas mediante lenguaje natural.
+
+El término **MCP** es un protocolo de código abierto que estandariza la comunicación entre un agente de IA y las herramientas externas que necesita para realizar tareas.
+
+Dado que la nube a menudo se refiere a **Google Cloud Platform (GCP)**, a continuación, se describe el proceso utilizando los servicios de Google Cloud, que es una plataforma ideal para este tipo de arquitectura.
+
+---
+
+## 1. Fundamentos: El Protocolo MCP
+
+El MCP funciona como un intermediario. En lugar de codificar la lógica de cómo el LLM debe interactuar con cada API o herramienta (Base de datos, servicios, etc.), tú creas un **servidor MCP** que estandariza la descripción de esas herramientas.
+
+1.  **Agente de IA (Cliente):** Envía la solicitud en lenguaje natural (ej., "Búscame el stock del producto X y envíale un correo al gerente").
+2.  **Servidor MCP:** Recibe la solicitud del Agente. El Agente usa el protocolo MCP para entender **qué herramientas** están disponibles en ese servidor, **qué hacen** y **cómo llamarlas** (es decir, el *contexto* de las herramientas).
+3.  **Herramientas Externas:** Son las funcionalidades reales (ej., una API para buscar en una base de datos o un servicio para enviar correos).
+
+---
+
+## 2. Elementos Clave en Google Cloud Platform (GCP)
+
+Para construir y desplegar un agente de IA que use MCP en GCP, se suelen emplear los siguientes servicios:
+
+| Elemento | Servicio en GCP | Propósito |
+| :--- | :--- | :--- |
+| **Modelo de Lenguaje (LLM)** | **Vertex AI Gemini API** o **Vertex AI Agent Builder** | Es el "cerebro" del Agente, el que razona qué herramienta del MCP debe usar. |
+| **Alojamiento del Servidor MCP** | **Cloud Run** o **Google Kubernetes Engine (GKE)** | Se utiliza para desplegar el **servidor MCP** (que es esencialmente un servidor web que expone las herramientas). **Cloud Run** (sin servidor) es ideal para escalado automático y eficiencia de costos. |
+| **Almacenamiento de Herramientas/Datos** | **Cloud SQL**, **BigQuery**, **Cloud Storage** | Bases de datos y almacenes de datos que las herramientas del MCP necesitan consultar o modificar para realizar las acciones. |
+| **Kit de Desarrollo de Agentes** | **Agent Development Kit (ADK)** | Un *framework* que facilita la construcción, prueba y despliegue de los agentes, incluyendo la conexión con los servidores MCP. |
+
+---
+
+## 3. Pasos para Crear el Agente con MCP en la Nube
+
+1.  **Desarrollar las Herramientas (APIs):** Crea los *scripts* o APIs que realizan las acciones específicas (ej., una función que se conecta a Cloud SQL para "obtener inventario").
+2.  **Crear el Servidor MCP:**
+    * Implementa un servidor web (usando frameworks como Python con FastMCP, Node.js, Java Quarkus, etc.) que sirva como el **Servidor MCP**.
+    * Este servidor debe exponer una *descripción estandarizada* de las herramientas creadas en el paso 1, siguiendo la especificación del protocolo MCP.
+3.  **Implementar en la Nube (GCP):**
+    * **Conteneriza** el Servidor MCP (si es necesario) en una imagen de Docker.
+    * Despliega el contenedor del Servidor MCP en un servicio sin servidor como **Cloud Run**. Esto proporciona una URL pública y escalable para tu servidor MCP.
+    * Asegúrate de configurar la autenticación (ej. OAuth, Service Accounts) para que tu Agente de IA pueda acceder de forma segura al *endpoint* de Cloud Run.
+4.  **Construir el Agente de IA (Cliente):**
+    * Utiliza **Vertex AI Agent Builder** o un *framework* como **LangChain** o el **ADK** de Google.
+    * Configura el Agente para que conozca la **URL del servidor MCP** desplegado en Cloud Run.
+    * El LLM de Vertex AI (por ejemplo, Gemini) podrá entonces consultar la lista de herramientas disponibles en el servidor MCP y decidir cuál ejecutar en respuesta a la solicitud del usuario.
+
+Este enfoque te permite desacoplar la lógica del Agente (razonamiento) de la funcionalidad de la herramienta (acción), lo que simplifica el desarrollo y permite que el LLM acceda a tus recursos y datos de la empresa de forma estructurada.
+
+Para más detalles sobre la integración de MCP y agentes de IA, consulta esta guía: [MCP: La NUEVA forma de crear AGENTES IA (Guía completa en n8n)](https://www.youtube.com/watch?v=e4HdTeuGs9M). Este video proporciona una explicación completa sobre qué es el protocolo MCP y cómo utilizarlo para crear agentes de IA.
+
+
+http://googleusercontent.com/youtube_content/1
+
+

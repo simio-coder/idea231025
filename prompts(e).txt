@@ -1,0 +1,31 @@
+Existen varias aplicaciones y herramientas populares para el diseño de la **estética web** o **frontend**, que se pueden clasificar en herramientas de diseño/prototipado y frameworks/librerías de desarrollo.
+
+## 1. Herramientas de Diseño y Prototipado (UI/UX)
+
+Estas aplicaciones son utilizadas por los diseñadores para crear la maqueta visual, la interfaz de usuario (UI) y la experiencia de usuario (UX) antes de que se escriba el código.
+
+* **Figma:** Es una de las herramientas más populares en la actualidad. Es **colaborativa** (basada en la nube) y permite crear diseños, prototipos interactivos, y cuenta con un fuerte ecosistema de componentes y plugins.
+* **Sketch:** Un programa enfocado en el diseño de interfaz de usuario, muy potente y con una interfaz intuitiva, aunque actualmente solo está disponible para **macOS**.
+* **Adobe XD:** Parte de la suite de Adobe, permite diseñar y crear prototipos interactivos para web y aplicaciones.
+* **Balsamiq:** Ideal para crear **wireframes** o bocetos de baja fidelidad de forma rápida, enfocándose en la estructura y el contenido más que en la estética final.
+* **Canva:** Aunque no es una herramienta puramente de UX/UI, tiene un **creador de sitios web** que es muy útil para generar diseños básicos y visualmente atractivos de forma sencilla, enfocándose más en la estética y el contenido final.
+
+***
+
+## 2. Frameworks y Librerías de Desarrollo (Frontend)
+
+Una vez que se tiene el diseño, los desarrolladores utilizan estas herramientas para construir el sitio o aplicación web funcional, definiendo la estética y el comportamiento.
+
+* **React:** Es una librería de JavaScript (desarrollada por Facebook) para construir **interfaces de usuario interactivas** basadas en componentes. Es muy popular para crear Aplicaciones de Una Sola Página (**SPA**).
+* **Vue.js:** Un framework de JavaScript conocido por su **simplicidad** y curva de aprendizaje suave, también enfocado en la construcción de interfaces de usuario.
+* **Angular:** Un framework completo (más que una librería) mantenido por Google, ideal para el desarrollo de **aplicaciones web grandes y escalables**.
+* **Bootstrap:** Es un **framework de CSS y JavaScript** que proporciona plantillas y componentes pre-diseñados (botones, formularios, navegación) que facilitan la creación de sitios web con diseño **responsivo** y una estética consistente.
+* **Tailwind CSS:** Un "utility-first" framework de CSS que permite construir diseños personalizados rápidamente usando clases de utilidad directamente en el HTML.
+
+Si tu objetivo es principalmente **diseñar la estética visual sin escribir código**, herramientas como **Figma**, **Sketch**, **Adobe XD** o incluso **Canva** (para un enfoque más de plantilla visual) son las más adecuadas. Si buscas construir una aplicación web real con código, **React**, **Vue.js** o **Angular** combinados con frameworks CSS como **Bootstrap** o **Tailwind CSS** son las opciones dominantes.
+
+***
+Aquí tienes una explicación sobre [Herramientas de Desarrollo Web Frontend](https://www.youtube.com/watch?v=EHUpaGEIfXo). Este video presenta varias herramientas utilizadas en el desarrollo de la parte visible de la web, que se relaciona directamente con el diseño y la estética.
+
+
+http://googleusercontent.com/youtube_content/0

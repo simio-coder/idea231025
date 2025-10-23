@@ -1,1 +1,2 @@
-# idea231025
+# idea231025:
+## Punto de entrada y Scope

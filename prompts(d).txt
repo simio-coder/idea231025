@@ -1,0 +1,28 @@
+El asistente de codificación de IA más directamente relacionado con GitHub que ofrece una opción de uso **gratuito** es **GitHub Copilot**.
+
+Si bien GitHub Copilot generalmente tiene una suscripción de pago (Copilot Individual o Copilot Business), existe una versión **gratuita** con ciertas limitaciones, que se integra principalmente con el IDE **Visual Studio Community 2022** (que a su vez es gratuito para estudiantes, desarrolladores *open source* y desarrolladores individuales).
+
+### **GitHub Copilot Free en Visual Studio**
+
+El plan **GitHub Copilot Free** (Gratuito) para **Visual Studio 2022** proporciona:
+
+* **Finalizaciones** de código.
+* **Chat** de Copilot (interacción conversacional para ayuda en programación).
+* **Ediciones** de código asistidas.
+* Acceso a ciertos modelos de IA (como GPT-5 mini, Gemini 2.0 Flash) con un **uso limitado** de chats y finalizaciones.
+
+#### **Aspectos a considerar:**
+
+* **Limitaciones:** La versión gratuita tiene un **límite de uso** mensual en la cantidad de chats y finalizaciones de código. Una vez que se alcanza el límite, se debe esperar al restablecimiento del ciclo mensual o actualizar a la versión de pago (Copilot Pro/Business).
+* **Acceso para estudiantes/profesores:** Si eres estudiante o profesor, puedes ser elegible para obtener **GitHub Copilot de forma gratuita** a través del programa **GitHub Education**.
+* **Integración:** La integración más profunda y la versión gratuita se promueven en **Visual Studio 2022 Community** (IDE de uso gratuito para ciertos usuarios). En otros entornos, como Visual Studio Code, aunque la extensión está disponible, el uso gratuito directo puede variar y el servicio principal es el de suscripción.
+
+### **Otras Opciones en el Ecosistema de GitHub**
+
+GitHub también proporciona la **API de GitHub Models** para experimentar con modelos de IA en tu propia aplicación a través de un **sitio de prueba gratuito** (*Playground*), pero esto está más orientado a la creación de prototipos y no es un IDE de uso general con IA integrada como Copilot.
+
+---
+Para más detalles sobre la herramienta y sus funciones, puedes ver este video sobre [10 Razones para usar GitHub Copilot como programador](https://www.youtube.com/watch?v=jsHAyBmFZlo). Este video de YouTube analiza las funcionalidades de GitHub Copilot, que tiene un nivel de uso gratuito con limitaciones o a través de programas como GitHub Education.
+
+
+http://googleusercontent.com/youtube_content/0

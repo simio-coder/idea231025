@@ -1,0 +1,11 @@
+Aquí tienes las direcciones web (URLs) de las plataformas de desarrollo en la nube y editores online que mencioné:
+
+| Plataforma | Dirección Oficial (URL) |
+| :--- | :--- |
+| **Replit** | [https://replit.com/](https://replit.com/) |
+| **CodeSandbox** | [https://codesandbox.io/](https://codesandbox.io/) |
+| **GitHub Codespaces** | [https://github.com/features/codespaces](https://github.com/features/codespaces) |
+| **AWS Cloud9** | [https://aws.amazon.com/es/cloud9/](https://aws.amazon.com/es/cloud9/) |
+| **Gitpod** | [https://www.gitpod.io/](https://www.gitpod.io/) (La URL principal te redirigirá a la información actual sobre la plataforma, que ahora también opera bajo la marca Ona). |
+
+**Nota sobre AWS Cloud9:** Según la información de AWS, es posible que el servicio ya no esté disponible para **nuevos clientes**, aunque los clientes existentes pueden seguir utilizándolo. Sin embargo, dado que ofrece una solución de IDE en la nube, la he incluido por si ya eres usuario de AWS o para referencia. **Replit** y **CodeSandbox** son excelentes puntos de partida que se enfocan en la facilidad de uso y el despliegue rápido.
